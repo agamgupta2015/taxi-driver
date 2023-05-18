@@ -17,7 +17,7 @@ function generateOTP() {
 // Send OTP to user's mobile number
 function sendOTP(phoneNumber, otp) {
   const accountSid = 'AC054493b7213ac9355c19c5c3db2ac518';
-  const authToken = '0f8e14b8f3b0c39f85e5dff5fabe53ec';
+  const authToken = 'token-id';
   const client = twilio(accountSid, authToken);
 
   return client.messages.create({
