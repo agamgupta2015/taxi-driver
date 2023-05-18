@@ -1,0 +1,9 @@
+const mongoose = require('mongoose');
+
+const creditSchema = new mongoose.Schema({
+  amount: { type: Number, required: true },
+  status: { type: String, enum: ['Pending', 'Paid', 'Settlement'], required: true },
+});
+
+const Credit = mongoose.model('Credit', creditSchema);
+module.exports = Credit;
